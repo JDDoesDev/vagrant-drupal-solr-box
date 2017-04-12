@@ -8,4 +8,4 @@ Vagrant Solr box to get a Drupal Solr environment quickly up and running in a VM
 2. `git clone --recursive git@github.com:Lullabot/vagrant-drupal-solr-box.git`
 3. `cd vagrant-drupal-solr-box`
 4. `vagrant up`
-5. Open http://localhost:8983/solr/#/ (on host)
+5. Open http://localhost:8888/solr/#/ (on host)
