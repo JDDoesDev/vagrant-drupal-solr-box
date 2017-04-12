@@ -74,7 +74,7 @@ class must-have {
   }
 
   exec { "download_solr":
-    command => "curl -L http://archive.apache.org/dist/lucene/solr/4.7.1/solr-4.7.1.tgz | tar zx --directory=/vagrant/solr --strip-components 1",
+    command => "curl -L https://archive.apache.org/dist/lucene/solr/3.5.0/apache-solr-3.5.0.tgz | tar zx --directory=/vagrant/solr --strip-components 1",
     cwd => "/vagrant",
     user => "vagrant",
     path => "/usr/bin/:/bin/",
@@ -96,48 +96,48 @@ class must-have {
 
   # Add Drupal config files
   file { '/vagrant/solr/example/solr/collection1/conf/elevate.xml':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/elevate.xml',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/elevate.xml',
     require => Exec['solr-download-drupal-module'],
     # notify  => Service['tomcat6'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/mapping-ISOLatin1Accent.txt':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/mapping-ISOLatin1Accent.txt',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/mapping-ISOLatin1Accent.txt',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/protwords.txt':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/protwords.txt',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/protwords.txt',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/schema.xml':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/schema.xml',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/schema.xml',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/schema_extra_fields.xml':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/schema_extra_fields.xml',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/schema_extra_fields.xml',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/schema_extra_types.xml':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/schema_extra_types.xml',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/schema_extra_types.xml',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/solrconfig.xml':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/solrconfig.xml',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/solrconfig.xml',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/solrconfig_extra.xml':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/solrconfig_extra.xml',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/solrconfig_extra.xml',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/solrcore.properties':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/solrcore.properties',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/solrcore.properties',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/stopwords.txt':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/stopwords.txt',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/stopwords.txt',
     require => Exec['solr-download-drupal-module'],
   }
   file { '/vagrant/solr/example/solr/collection1/conf/synonyms.txt':
-    source  => 'file:///vagrant/apachesolr/solr-conf/solr-4.x/synonyms.txt',
+    source  => 'file:///vagrant/apachesolr/solr-conf/solr-3.x/synonyms.txt',
     require => Exec['solr-download-drupal-module'],
   }
 
