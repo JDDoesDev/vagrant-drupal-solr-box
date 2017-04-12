@@ -10,7 +10,6 @@ Vagrant.configure("2") do |config|
     puppet.manifest_file  = "default.pp"
   end
   config.vm.provider "virtualbox" do |v|
-    v.name = "drupal-solr"
     v.customize ["modifyvm", :id, "--cpus", "2"]
     v.customize ["modifyvm", :id, "--memory", "1024"]
   end
